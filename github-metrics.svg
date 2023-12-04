@@ -4332,7 +4332,7 @@
                                 <div class="title">
                                     <span class="prefix">Master</span>
                                     developer
-                                    <span class="gh">ranked 436 out of 125m users</span>
+                                    <span class="gh">ranked 436 out of 124m users</span>
                                 </div>
                                 <div class="text">Published 3249 public repositories</div>
                             </div>
@@ -4480,7 +4480,7 @@
                                 <div class="title">
                                     <span class="prefix">Great</span>
                                     influencer
-                                    <span class="gh">ranked 43.1k out of 125m users</span>
+                                    <span class="gh">ranked 43.1k out of 124m users</span>
                                 </div>
                                 <div class="text">Followed by 201 users</div>
                             </div>
@@ -4630,7 +4630,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Maintainer
-                                    <span class="gh">ranked 1.21m out of 51.1m repositories</span>
+                                    <span class="gh">ranked 1.21m out of 56.2m repositories</span>
                                 </div>
                                 <div class="text">Maintaining a repository with 18 stars</div>
                             </div>
@@ -4803,14 +4803,14 @@
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #0893E1">Your fortune: You will meet a dark handsome stranger</b>
+                            <b style="color: #7FEC11">Your fortune: Bad Luck</b>
                         </div>
                     </section>
                 </div>
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 5 Dec 2023, 11:07:36 (timezone Pacific/Auckland) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 5 Dec 2023, 12:07:51 (timezone Pacific/Auckland) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
