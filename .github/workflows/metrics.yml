@@ -96,12 +96,13 @@ jobs:
           plugin_skyline: yes
           plugin_skyline_frames: ${{ secrets.SKYLINE_FPS }}
           plugin_skyline_quality: 1
-          plugin_skyline_settings: {
-  "url": "https://skyline.github.com/${login}/${year}",
-  "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
-  "wait": 1,
-  "hide": "button, footer, a"
-}
+          plugin_skyline_settings: |
+            {
+              "url": "https://skyline.github.com/${login}/${year}",
+              "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
+              "wait": 1,
+              "hide": "button, footer, a"
+            }
           plugin_skyline_year: ${{ secrets.SKYLINE_YEAR }}
           plugin_stargazers: yes
           plugin_stargazers_charts: yes
