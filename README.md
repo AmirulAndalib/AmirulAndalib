@@ -9,7 +9,6 @@
   <a href="https://github.com/AmirulAndalib?tab=followers"><img src="https://img.shields.io/github/followers/AmirulAndalib?style=flat&label=followers&color=0969da" alt="Followers"></a>
   <a href="https://github.com/AmirulAndalib?tab=repositories&type=source&sort=stargazers"><img src="https://img.shields.io/github/stars/AmirulAndalib?affiliations=OWNER&style=flat&label=stars&color=0969da" alt="Stars across my repositories"></a>
   <img src="https://komarev.com/ghpvc/?username=AmirulAndalib&style=flat&color=0969da&label=profile+views" alt="Profile views">
-  <a href="https://github.com/AmirulAndalib/AmirulAndalib/actions/workflows/profile.yml"><img src="https://github.com/AmirulAndalib/AmirulAndalib/actions/workflows/profile.yml/badge.svg" alt="Profile cards workflow"></a>
   <img src="https://img.shields.io/badge/timezone-Pacific%2FAuckland-59636e?style=flat" alt="Timezone Pacific/Auckland">
 </p>
 
