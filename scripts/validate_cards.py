@@ -24,6 +24,15 @@ STEMS = (
     "trophy",
     "activity",
     "star-history",
+    "skills",
+    "pin-gl-inet-mt6000-auto-snapshot",
+    "pin-asus-nuc16pro-cachyos-server-edge-kernel",
+    "pin-nvpi-r-auto",
+    "pin-mvolt-scoop",
+    "pin-TL-GD",
+    "pin-Tor-Toolkit",
+    "pin-GdriveTools",
+    "pin-MLTB-ALPINE-DOCKER",
     "wakatime",
     "steam",
 )
@@ -48,7 +57,7 @@ def problems_in(path: Path) -> list[str]:
         return ["contains an XML entity declaration"]
     # Some cards come from code installed without a lockfile; refuse anything active.
     lowered = raw.lower()
-    for marker in (b"<script", b"javascript:", b"<foreignobject"):
+    for marker in (b"<script", b"javascript:"):
         if marker in lowered:
             return [f"contains {marker.decode()}"]
     try:

@@ -22,6 +22,7 @@ from common import (
     divider,
     fmt_duration,
     get_json,
+    row,
     text,
     truncate,
     write_cards,
@@ -159,6 +160,7 @@ def render(profile: dict, palette: Palette) -> str:
 
     for index, game in enumerate(profile["recent"]):
         top = 130 + index * ROW
+        start = len(body)
         if game.get("image"):
             body.append(
                 f'<image href="{game["image"]}" x="{PAD}" y="{top}" width="92" height="34" '
@@ -187,6 +189,7 @@ def render(profile: dict, palette: Palette) -> str:
                 fill=palette.muted,
             )
         )
+        body[start:] = [row("".join(body[start:]), index)]
     height = 130 + len(profile["recent"]) * ROW + 10
     return card(height, "Steam profile", "".join(body), palette, defs)
 

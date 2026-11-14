@@ -19,6 +19,7 @@ from common import (
     card,
     divider,
     post_json,
+    row,
     text,
     truncate,
     write_cards,
@@ -103,10 +104,10 @@ def render(repos: list[dict], now: datetime, palette: Palette) -> str:
     for index, repo in enumerate(repos):
         top = 76 + index * ROW
         language = repo.get("language")
-        body.append(
+        line = [
             text(PAD, top, truncate(repo["name"], 44), weight=600, fill=palette.accent)
-        )
-        body.append(
+        ]
+        line.append(
             text(
                 WIDTH - PAD,
                 top,
@@ -120,13 +121,14 @@ def render(repos: list[dict], now: datetime, palette: Palette) -> str:
         x = PAD
         if language:
             colour = LANGUAGE_COLOURS.get(language, palette.muted)
-            body.append(f'<circle cx="{x + 5}" cy="{top + 14}" r="5" fill="{colour}"/>')
-            body.append(text(x + 15, top + 18, language, size=12, fill=palette.muted))
+            line.append(f'<circle cx="{x + 5}" cy="{top + 14}" r="5" fill="{colour}"/>')
+            line.append(text(x + 15, top + 18, language, size=12, fill=palette.muted))
             x += 15 + len(language) * 7 + 12
         limit = int((WIDTH - PAD - x) / 6.4)
-        body.append(
+        line.append(
             text(x, top + 18, truncate(description, limit), size=12, fill=palette.muted)
         )
+        body.append(row("".join(line), index))
     height = 76 + len(repos) * ROW - 12
     return card(height, "Recently updated repositories", "".join(body), palette)
 

@@ -33,9 +33,9 @@ jobs:
     permissions:
       contents: read
     env:
-      STATS: show_icons=true&hide_rank=true&include_all_commits=true&show=all_time_contribs,prs_merged,reviews&card_width=495&border_radius=6&disable_animations=true
-      LANGS: layout=compact&langs_count=8&card_width=495&border_radius=6&disable_animations=true
-      STREAK: border_radius=6&disable_animations=true&timezone=Pacific/Auckland
+      STATS: show_icons=true&hide_rank=true&include_all_commits=true&show=all_time_contribs,prs_merged,reviews&card_width=495&border_radius=6
+      LANGS: layout=compact&langs_count=8&card_width=495&border_radius=6
+      STREAK: border_radius=6&timezone=Pacific/Auckland
     steps:
       - name: Stats (light)
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
@@ -159,6 +159,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/cards/repos_card.py out
+      - name: Repository pin cards
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/cards/pins_card.py out
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: cards-custom
@@ -218,6 +222,12 @@ jobs:
           base="http://127.0.0.1:$PORT/graph?username=$GITHUB_REPOSITORY_OWNER&days=90&area=true&radius=6&height=300&custom_title=Contributions%20in%20the%20last%2090%20days"
           curl -sf "$base&bg_color=ffffff&color=1f2328&title_color=1f2328&line=0969da&point=0969da&area_color=0969da&border_color=d1d9e0" -o ../out/activity-light.svg
           curl -sf "$base&bg_color=0d1117&color=9198a1&title_color=f0f6fc&line=4493f8&point=4493f8&area_color=4493f8&border_color=3d444d" -o ../out/activity-dark.svg
+      - name: Skill icons
+        run: |
+          set -euo pipefail
+          icons="py,bash,powershell,docker,githubactions,git,linux,arch,windows,androidstudio,vscode,md"
+          curl -sf --retry 3 "https://skillicons.dev/icons?i=${icons}&perline=12&theme=light" -o out/skills-light.svg
+          curl -sf --retry 3 "https://skillicons.dev/icons?i=${icons}&perline=12&theme=dark" -o out/skills-dark.svg
       - name: Star history
         run: |
           set -euo pipefail

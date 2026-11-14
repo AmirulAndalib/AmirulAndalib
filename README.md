@@ -5,20 +5,35 @@
   <img src="assets/header-light.svg" alt="M Amirul. Firmware, kernels, and the automation that keeps them current. Auckland, New Zealand." width="100%">
 </picture>
 
-<p>
-  <a href="https://github.com/AmirulAndalib?tab=followers"><img src="https://img.shields.io/github/followers/AmirulAndalib?style=flat&label=followers&color=0969da" alt="Followers"></a>
-  <a href="https://github.com/AmirulAndalib?tab=repositories&type=source&sort=stargazers"><img src="https://img.shields.io/github/stars/AmirulAndalib?affiliations=OWNER&style=flat&label=stars&color=0969da" alt="Stars across my repositories"></a>
-  <img src="https://komarev.com/ghpvc/?username=AmirulAndalib&style=flat&color=0969da&label=profile+views" alt="Profile views">
-  <img src="https://img.shields.io/badge/timezone-Pacific%2FAuckland-59636e?style=flat" alt="Timezone Pacific/Auckland">
+<p align="center">
+  <a href="https://github.com/AmirulAndalib?tab=followers"><img src="https://img.shields.io/github/followers/AmirulAndalib?style=for-the-badge&label=followers&color=0969da&logo=github" alt="Followers"></a>
+  <a href="https://github.com/AmirulAndalib?tab=repositories&type=source&sort=stargazers"><img src="https://img.shields.io/github/stars/AmirulAndalib?affiliations=OWNER&style=for-the-badge&label=stars&color=0969da&logo=github" alt="Stars across my repositories"></a>
+  <img src="https://komarev.com/ghpvc/?username=AmirulAndalib&style=for-the-badge&color=0969da&label=profile+views" alt="Profile views">
+  <a href="https://github.com/pulls?q=is%3Apr+author%3AAmirulAndalib+is%3Amerged+-user%3AAmirulAndalib"><img src="https://img.shields.io/badge/merged_upstream-openwrt%20%C2%B7%20winget--pkgs-34A853?style=for-the-badge&logo=git&logoColor=white" alt="Merged pull requests upstream"></a>
+</p>
+
+<p align="center">
+  <a href="https://orcid.org/0009-0006-8898-2281"><img src="https://img.shields.io/badge/ORCID-0009--0006--8898--2281-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID"></a>
+  <a href="https://wakatime.com/@AmirulAndalib"><img src="https://img.shields.io/badge/WakaTime-@AmirulAndalib-1f2328?style=flat-square&logo=wakatime&logoColor=white" alt="WakaTime"></a>
+  <a href="https://steamcommunity.com/id/AmirulAndalib"><img src="https://img.shields.io/badge/Steam-AmirulAndalib-171a21?style=flat-square&logo=steam&logoColor=white" alt="Steam"></a>
+  <a href="https://stackoverflow.com/users/15605896"><img src="https://img.shields.io/badge/Stack_Overflow-15605896-F58025?style=flat-square&logo=stackoverflow&logoColor=white" alt="Stack Overflow"></a>
+  <img src="https://img.shields.io/badge/timezone-Pacific%2FAuckland-59636e?style=flat-square" alt="Timezone Pacific/Auckland">
 </p>
 
 I build, compile and tweak niche code. Most of what I ship is automation that keeps running
 after I stop looking at it: a router that flashes its own firmware, a kernel that rebuilds the
 moment upstream moves, and Windows packages that publish themselves every six hours.
 
-**Contents:** [About](#about) · [Toolbox](#toolbox) · [Current work](#current-work) ·
-[Earlier projects](#earlier-projects) · [GitHub stats](#github-stats) ·
-[Activity](#activity) · [How this profile works](#how-this-profile-works)
+<p align="center">
+  <a href="#about">About</a> ·
+  <a href="#toolbox">Toolbox</a> ·
+  <a href="#current-work">Current work</a> ·
+  <a href="#open-source-contributions">Upstream contributions</a> ·
+  <a href="#earlier-projects">Earlier projects</a> ·
+  <a href="#github-stats">GitHub stats</a> ·
+  <a href="#activity">Activity</a> ·
+  <a href="#how-this-profile-works">How this profile works</a>
+</p>
 
 ## About
 
@@ -35,7 +50,14 @@ moment upstream moves, and Windows packages that publish themselves every six ho
 
 ## Toolbox
 
-<p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/skills-dark.svg">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/skills-light.svg" alt="Python, Bash, PowerShell, Docker, GitHub Actions, Git, Linux, Arch Linux, Windows, Android Studio, VS Code, Markdown" width="80%">
+  </picture>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnubash&logoColor=white" alt="Shell">
   <img src="https://img.shields.io/badge/PowerShell-012456?style=flat" alt="PowerShell">
@@ -70,6 +92,19 @@ moment upstream moves, and Windows packages that publish themselves every six ho
 
 <p align="right"><a href="#top">back to top</a></p>
 
+## Open source contributions
+
+Merged pull requests to projects I don't own.
+
+| Project | Merged | What I contributed |
+| --- | --- | --- |
+| [openwrt/luci](https://github.com/openwrt/luci/pulls?q=is%3Apr+author%3AAmirulAndalib+is%3Amerged) | <img src="https://img.shields.io/github/issues-search?query=repo%3Aopenwrt%2Fluci%20author%3AAmirulAndalib%20is%3Apr%20is%3Amerged&label=merged&style=flat&color=34A853" alt="Merged PRs to openwrt/luci"> | Added the `luci-app-openspeedtest` package to the OpenWrt web interface |
+| [microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs/pulls?q=is%3Apr+author%3AAmirulAndalib) | <img src="https://img.shields.io/github/issues-search?query=repo%3Amicrosoft%2Fwinget-pkgs%20author%3AAmirulAndalib%20is%3Apr%20is%3Amerged&label=merged&style=flat&color=34A853" alt="Merged PRs to microsoft/winget-pkgs"> | Package manifests, including b00nz.mVolt releases |
+| [yash-dk/TorToolkit-Telegram](https://github.com/yash-dk/TorToolkit-Telegram/pulls?q=is%3Apr+author%3AAmirulAndalib) | <img src="https://img.shields.io/github/issues-search?query=repo%3Ayash-dk%2FTorToolkit-Telegram%20author%3AAmirulAndalib%20is%3Apr%20is%3Amerged&label=merged&style=flat&color=34A853" alt="Merged PRs to TorToolkit-Telegram"> | Server and home page fixes for the upstream TorToolkit bot |
+| Others | <img src="https://img.shields.io/github/issues-search?query=author%3AAmirulAndalib%20is%3Apr%20is%3Amerged%20-user%3AAmirulAndalib&label=merged%20in%20total&style=flat&color=34A853" alt="All merged upstream PRs"> | Docker build for MERGE-BOT, a compiler-flag fix for megasdkrest, a CI fix for slimhub_actions, and fixes to boibrary-astro |
+
+<p align="right"><a href="#top">back to top</a></p>
+
 ## Earlier projects
 
 | Project | What it does | Reach |
@@ -79,6 +114,21 @@ moment upstream moves, and Windows packages that publish themselves every six ho
 | [GdriveTools](https://github.com/AmirulAndalib/GdriveTools) | Python tool for Google Drive: creates service accounts, adds them to shared drives, and generates OAuth tokens. | <img src="https://img.shields.io/github/stars/AmirulAndalib/GdriveTools?style=flat&label=stars" alt="Stars"> <img src="https://img.shields.io/github/forks/AmirulAndalib/GdriveTools?style=flat&label=forks" alt="Forks"> |
 | [MLTB-ALPINE-DOCKER](https://github.com/AmirulAndalib/MLTB-ALPINE-DOCKER) | Alpine Edge Docker image for Mirror Leech Telegram Bot, built for amd64, arm64 and armv7. | <img src="https://img.shields.io/github/stars/AmirulAndalib/MLTB-ALPINE-DOCKER?style=flat&label=stars" alt="Stars"> <img src="https://img.shields.io/github/forks/AmirulAndalib/MLTB-ALPINE-DOCKER?style=flat&label=forks" alt="Forks"> |
 | [Scene7_ExtremeGT](https://github.com/AmirulAndalib/Scene7_ExtremeGT) | Unofficial Extreme GT Magisk module with power and thermal profiles for Samsung Exynos devices. | <img src="https://img.shields.io/github/stars/AmirulAndalib/Scene7_ExtremeGT?style=flat&label=stars" alt="Stars"> <img src="https://img.shields.io/github/forks/AmirulAndalib/Scene7_ExtremeGT?style=flat&label=forks" alt="Forks"> |
+
+<details open>
+<summary>Repository cards</summary>
+<br>
+<p align="center">
+<a href="https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-light.svg" alt="gl-inet-mt6000-auto-snapshot" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-light.svg" alt="asus-nuc16pro-cachyos-server-edge-kernel" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/nvpi-r-auto"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-light.svg" alt="nvpi-r-auto" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/mvolt-scoop"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-light.svg" alt="mvolt-scoop" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/TL-GD"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-light.svg" alt="TL-GD" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/Tor-Toolkit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-light.svg" alt="Tor-Toolkit" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/GdriveTools"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-light.svg" alt="GdriveTools" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/MLTB-ALPINE-DOCKER"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-light.svg" alt="MLTB-ALPINE-DOCKER" width="49%"></picture></a>
+</p>
+</details>
 
 <details>
 <summary>Star history of the bots and tools</summary>

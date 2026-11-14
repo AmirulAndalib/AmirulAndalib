@@ -23,6 +23,7 @@ from common import (
     divider,
     fmt_duration,
     get_json,
+    row,
     text,
     truncate,
     write_cards,
@@ -69,19 +70,21 @@ def _section(
 ) -> tuple[str, float]:
     parts = [text(PAD, top, title, size=12, weight=600, fill=palette.muted)]
     y = top + 24
-    for row in rows:
-        parts.append(text(PAD, y, truncate(row["name"], 18), fill=palette.fg))
-        parts.append(bar(170, y - 9, 205, row["total_seconds"] / total, palette))
-        parts.append(
-            text(
+    for index, item in enumerate(rows):
+        delay = 0.15 + index * 0.08
+        content = (
+            text(PAD, y, truncate(item["name"], 18), fill=palette.fg)
+            + bar(170, y - 9, 205, item["total_seconds"] / total, palette, delay)
+            + text(
                 WIDTH - PAD,
                 y,
-                fmt_duration(row["total_seconds"]),
+                fmt_duration(item["total_seconds"]),
                 size=12,
                 fill=palette.muted,
                 anchor="end",
             )
         )
+        parts.append(row(content, index))
         y += ROW
     return "".join(parts), y
 

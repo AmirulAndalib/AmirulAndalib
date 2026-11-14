@@ -134,16 +134,42 @@ def text(
     )
 
 
-def bar(x: float, y: float, width: float, fraction: float, palette: Palette) -> str:
+def bar(
+    x: float,
+    y: float,
+    width: float,
+    fraction: float,
+    palette: Palette,
+    delay: float = 0,
+) -> str:
     fill = max(0.0, min(1.0, fraction)) * width
     parts = [
         f'<rect x="{x:g}" y="{y:g}" width="{width:g}" height="8" rx="4" fill="{palette.track}"/>'
     ]
     if fill >= 1:
         parts.append(
-            f'<rect x="{x:g}" y="{y:g}" width="{max(fill, 8):.1f}" height="8" rx="4" fill="{palette.accent}"/>'
+            f'<rect class="grow" style="animation-delay:{delay:.2f}s" x="{x:g}" y="{y:g}" '
+            f'width="{max(fill, 8):.1f}" height="8" rx="4" fill="{palette.accent}"/>'
         )
     return "".join(parts)
+
+
+def row(content: str, index: int) -> str:
+    """Wrap one list row so rows fade in one after another."""
+    return f'<g class="row" style="animation-delay:{0.15 + index * 0.08:.2f}s">{content}</g>'
+
+
+# Rows fade in and bars grow from the left. Viewers who ask for reduced motion get the
+# finished card immediately.
+ANIMATION_CSS = (
+    "<style>"
+    ".row{opacity:0;animation:fade .45s ease-out forwards}"
+    ".grow{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);"
+    "animation:grow .9s cubic-bezier(.2,.7,.2,1) forwards}"
+    "@keyframes fade{to{opacity:1}}@keyframes grow{to{transform:scaleX(1)}}"
+    "@media (prefers-reduced-motion:reduce){.row,.grow{animation:none;opacity:1;transform:none}}"
+    "</style>"
+)
 
 
 def divider(y: float, palette: Palette) -> str:
@@ -154,7 +180,7 @@ def card(height: float, label: str, body: str, palette: Palette, defs: str = "")
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height:g}" '
         f'viewBox="0 0 {WIDTH} {height:g}" role="img" aria-label="{escape(label)}">'
-        f"<title>{escape(label)}</title>"
+        f"<title>{escape(label)}</title>{ANIMATION_CSS}"
         f"{f'<defs>{defs}</defs>' if defs else ''}"
         f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1:g}" rx="6" '
         f'fill="{palette.bg}" stroke="{palette.border}"/>'
