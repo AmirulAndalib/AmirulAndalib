@@ -141,10 +141,12 @@ hours.
 | [nvpi-r-auto](https://github.com/AmirulAndalib/nvpi-r-auto) | Unofficial WinGet and Scoop packaging for NVIDIA Profile Inspector and NVPI Revamped, checked for new releases every six hours. | <img src="https://github.com/AmirulAndalib/nvpi-r-auto/actions/workflows/update.yml/badge.svg" alt="Update workflow"> <img src="https://img.shields.io/github/last-commit/AmirulAndalib/nvpi-r-auto?style=flat&label=updated" alt="Last commit"> |
 | [mvolt-scoop](https://github.com/AmirulAndalib/mvolt-scoop) | Unofficial Scoop bucket for mVolt+, the NVIDIA GPU tuning tool. | <img src="https://img.shields.io/github/last-commit/AmirulAndalib/mvolt-scoop?style=flat&label=updated" alt="Last commit"> |
 
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-light.svg" alt="My most recently updated repositories" width="49%">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-light.svg" alt="My most recently updated repositories" width="60%">
 </picture>
+</p>
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -175,14 +177,14 @@ Merged pull requests to projects I don't own.
 <summary>Repository cards</summary>
 <br>
 <p align="center">
-<a href="https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-light.svg" alt="gl-inet-mt6000-auto-snapshot" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-light.svg" alt="asus-nuc16pro-cachyos-server-edge-kernel" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/nvpi-r-auto"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-light.svg" alt="nvpi-r-auto" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/mvolt-scoop"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-light.svg" alt="mvolt-scoop" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/TL-GD"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-light.svg" alt="TL-GD" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/Tor-Toolkit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-light.svg" alt="Tor-Toolkit" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/GdriveTools"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-light.svg" alt="GdriveTools" width="49%"></picture></a>
-<a href="https://github.com/AmirulAndalib/MLTB-ALPINE-DOCKER"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-light.svg" alt="MLTB-ALPINE-DOCKER" width="49%"></picture></a>
+<a href="https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-gl-inet-mt6000-auto-snapshot-light.svg" alt="gl-inet-mt6000-auto-snapshot" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-asus-nuc16pro-cachyos-server-edge-kernel-light.svg" alt="asus-nuc16pro-cachyos-server-edge-kernel" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/nvpi-r-auto"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-nvpi-r-auto-light.svg" alt="nvpi-r-auto" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/mvolt-scoop"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-mvolt-scoop-light.svg" alt="mvolt-scoop" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/TL-GD"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-TL-GD-light.svg" alt="TL-GD" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/Tor-Toolkit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-Tor-Toolkit-light.svg" alt="Tor-Toolkit" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/GdriveTools"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-GdriveTools-light.svg" alt="GdriveTools" width="49%" align="top"></picture></a>
+<a href="https://github.com/AmirulAndalib/MLTB-ALPINE-DOCKER"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-dark.svg"><img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/pin-MLTB-ALPINE-DOCKER-light.svg" alt="MLTB-ALPINE-DOCKER" width="49%" align="top"></picture></a>
 </p>
 </details>
 
@@ -202,31 +204,31 @@ Merged pull requests to projects I don't own.
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/stats-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/stats-light.svg" alt="GitHub stats: stars, commits, pull requests, issues and contributions" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/stats-light.svg" alt="GitHub stats: stars, commits, pull requests, issues and contributions" width="49%" align="top">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/languages-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/languages-light.svg" alt="Most used languages across my repositories" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/languages-light.svg" alt="Most used languages across my repositories" width="49%" align="top">
   </picture>
 </p>
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/streak-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/streak-light.svg" alt="Contribution streak" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/streak-light.svg" alt="Contribution streak" width="49%" align="top">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/productive-time-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/productive-time-light.svg" alt="Commits by hour of day in New Zealand time" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/productive-time-light.svg" alt="Commits by hour of day in New Zealand time" width="49%" align="top">
   </picture>
 </p>
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-per-language-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-per-language-light.svg" alt="Top languages by repository" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-per-language-light.svg" alt="Top languages by repository" width="49%" align="top">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/commit-language-dark.svg">
-    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/commit-language-light.svg" alt="Top languages by commit" width="49%">
+    <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/commit-language-light.svg" alt="Top languages by commit" width="49%" align="top">
   </picture>
 </p>
 
@@ -252,11 +254,11 @@ Merged pull requests to projects I don't own.
 <!-- Coding and gaming: enabled once the profile workflow can run with the WakaTime and Steam secrets.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="49%">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="49%" align="top">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/steam-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/steam-light.svg" alt="Steam profile and games played in the last two weeks" width="49%">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/steam-light.svg" alt="Steam profile and games played in the last two weeks" width="49%" align="top">
 </picture>
 -->
 

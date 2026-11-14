@@ -62,7 +62,7 @@ def render(repo: dict, now: datetime, palette: Palette) -> str:
         text(
             24,
             60,
-            truncate(repo.get("description") or "No description", 70),
+            truncate(repo.get("description") or "", 70),
             size=12,
             fill=palette.muted,
         ),
