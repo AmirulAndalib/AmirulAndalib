@@ -7,8 +7,8 @@
     .caret{animation:caret 2.2s steps(47) .7s forwards,blink 1s step-end 2.9s 4}
     .sq{transform-box:fill-box;transform-origin:center;animation:pulse 2.8s ease-in-out infinite}
     @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-    @keyframes type{from{transform:translateX(0)}to{transform:translateX(600px)}}
-    @keyframes caret{from{transform:translateX(0)}to{transform:translateX(600px)}}
+    @keyframes type{from{transform:translateX(0)}to{transform:translateX(404px)}}
+    @keyframes caret{from{transform:translateX(0)}to{transform:translateX(404px)}}
     @keyframes blink{50%{opacity:0}}
     @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(.82)}}
     @media (prefers-reduced-motion:reduce){.name,.detail{animation:none;opacity:1}.cover,.caret{display:none}.sq{animation:none}}

@@ -2,8 +2,9 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" alt="M Amirul. Firmware, kernels, and the automation that keeps them current. Auckland, New Zealand." width="100%">
+  <img src="assets/header-light.svg" alt="M Amirul. DevOps, cloud, Linux sysadmin and cybersecurity. Auckland, New Zealand." width="100%">
 </picture>
+<br><br>
 
 <p align="center">
   <a href="https://github.com/AmirulAndalib?tab=followers"><img src="https://img.shields.io/github/followers/AmirulAndalib?style=for-the-badge&label=followers&color=0969da&logo=github" alt="Followers"></a>
@@ -145,7 +146,7 @@ hours.
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-light.svg" alt="My most recently updated repositories" width="60%">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/repos-light.svg" alt="My most recently updated repositories" width="100%">
 </picture>
 </p>
 
@@ -259,7 +260,7 @@ Tracked by WakaTime across my editors and Claude Code.
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="70%">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="100%">
 </picture>
 </p>
 
