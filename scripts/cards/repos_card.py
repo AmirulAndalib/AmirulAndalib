@@ -117,7 +117,7 @@ def render(repos: list[dict], now: datetime, palette: Palette) -> str:
                 anchor="end",
             )
         )
-        description = repo.get("description") or "No description"
+        description = repo.get("description") or ""
         x = PAD
         if language:
             colour = LANGUAGE_COLOURS.get(language, palette.muted)

@@ -27,7 +27,8 @@ from pathlib import Path
 
 API = "https://api.github.com"
 KEEP_DAYS = 365
-KEEP_ALWAYS: set[str] = set()  # "owner/name" entries that must never be disabled
+# "owner/name" entries that must never be disabled.
+KEEP_ALWAYS: set[str] = {"AmirulAndalib/fork"}
 
 INVENTORY_QUERY = """
 query($login: String!, $after: String) {
