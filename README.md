@@ -154,6 +154,17 @@ hours.
 
 <p align="right"><a href="#top">back to top</a></p>
 
+**Latest releases** (refreshed daily)
+
+<!-- RELEASES:START -->
+- [asus-nuc16pro-cachyos-server-edge-kernel](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel): [Linux 7.3.4 • CachyOS ServerMax • ASUS NUC 16 Pro • 2026-11-13](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel/releases/tag/v7.3.4-cachyos-servermax-nuc16pro-x86_64v3-20261113.212), 2026-11-13
+- [gl-inet-mt6000-auto-snapshot](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot): [GL-MT6000 Snapshot 4.11.0 (2026-11-12 16:33:06 UTC)](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot/releases/tag/v4.11.0-snapshot-1794501186), 2026-11-13
+- [mvolt-scoop](https://github.com/AmirulAndalib/mvolt-scoop): [mVolt+ v0.50.13 (mirror)](https://github.com/AmirulAndalib/mvolt-scoop/releases/tag/v0.50.13), 2026-11-08
+- [Scene7_ExtremeGT](https://github.com/AmirulAndalib/Scene7_ExtremeGT): [Release 20250621-015944](https://github.com/AmirulAndalib/Scene7_ExtremeGT/releases/tag/release-20250621-015944), 2025-06-20
+- [xiaomi-router-4a-gigabit](https://github.com/AmirulAndalib/xiaomi-router-4a-gigabit): [2025.04.15 xiaomi-router-4a-gigabit](https://github.com/AmirulAndalib/xiaomi-router-4a-gigabit/releases/tag/2025.04.15), 2025-04-14
+- [S21U-P3S-Exynos-Extras-OneUi](https://github.com/AmirulAndalib/S21U-P3S-Exynos-Extras-OneUi): [Magisk Module for modded CSC and Build.prop release: v24.01.2024.00.35](https://github.com/AmirulAndalib/S21U-P3S-Exynos-Extras-OneUi/releases/tag/v24.01.2024.00.35), 2024-01-23
+<!-- RELEASES:END -->
+
 ## Open source contributions
 
 Merged pull requests to projects I don't own.
@@ -166,6 +177,17 @@ Merged pull requests to projects I don't own.
 | Others | <img src="https://img.shields.io/github/issues-search?query=author%3AAmirulAndalib%20is%3Apr%20is%3Amerged%20-user%3AAmirulAndalib&label=merged%20in%20total&style=flat&color=34A853" alt="All merged upstream PRs"> | Docker build for MERGE-BOT, a compiler-flag fix for megasdkrest, a CI fix for slimhub_actions, and fixes to boibrary-astro |
 
 <p align="right"><a href="#top">back to top</a></p>
+
+**Recently merged upstream** (refreshed daily)
+
+<!-- MERGED:START -->
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.2.0](https://github.com/microsoft/winget-pkgs/pull/458286), 2026-10-22
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.1.0](https://github.com/microsoft/winget-pkgs/pull/453538), 2026-10-16
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.0.0](https://github.com/microsoft/winget-pkgs/pull/453255), 2026-10-15
+- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.3](https://github.com/microsoft/winget-pkgs/pull/452113), 2026-10-13
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.2.1.0](https://github.com/microsoft/winget-pkgs/pull/424400), 2026-09-16
+- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.2](https://github.com/microsoft/winget-pkgs/pull/403522), 2026-07-17
+<!-- MERGED:END -->
 
 ## Earlier projects
 
