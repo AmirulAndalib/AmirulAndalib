@@ -40,6 +40,8 @@ GRID = [
 
 def render(c: dict[str, str]) -> str:
     steps = len(TAGLINE)
+    # About 8.6 px per character at 18 px in the system UI font.
+    shift = round(len(TAGLINE) * 8.6)
     squares = []
     for r, line in enumerate(GRID):
         for col, opacity in enumerate(line):
@@ -57,8 +59,8 @@ def render(c: dict[str, str]) -> str:
     .caret{{animation:caret 2.2s steps({steps}) .7s forwards,blink 1s step-end 2.9s 4}}
     .sq{{transform-box:fill-box;transform-origin:center;animation:pulse 2.8s ease-in-out infinite}}
     @keyframes rise{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}
-    @keyframes type{{from{{transform:translateX(0)}}to{{transform:translateX(600px)}}}}
-    @keyframes caret{{from{{transform:translateX(0)}}to{{transform:translateX(600px)}}}}
+    @keyframes type{{from{{transform:translateX(0)}}to{{transform:translateX({shift}px)}}}}
+    @keyframes caret{{from{{transform:translateX(0)}}to{{transform:translateX({shift}px)}}}}
     @keyframes blink{{50%{{opacity:0}}}}
     @keyframes pulse{{0%,100%{{transform:scale(1)}}50%{{transform:scale(.82)}}}}
     @media (prefers-reduced-motion:reduce){{.name,.detail{{animation:none;opacity:1}}.cover,.caret{{display:none}}.sq{{animation:none}}}}
