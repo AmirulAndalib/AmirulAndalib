@@ -1,0 +1,273 @@
+name: Profile cards
+
+# Renders every card shown in README.md and publishes them as a single orphan commit on the
+# `output` branch, so master never collects generated files. The publish job validates every
+# SVG first: a card that renders an error message fails the run instead of going live.
+
+on:
+  schedule:
+    - cron: "23 13 * * *" # 02:23 in New Zealand (NZDT)
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/profile.yml"
+      - "scripts/**"
+
+permissions: {}
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+env:
+  LIGHT: title_color=1f2328&text_color=59636e&icon_color=59636e&bg_color=ffffff&border_color=d1d9e0
+  DARK: title_color=f0f6fc&text_color=9198a1&icon_color=9198a1&bg_color=0d1117&border_color=3d444d
+  STREAK_LIGHT: background=ffffff&border=d1d9e0&stroke=d1d9e0&ring=0969da&fire=0969da&currStreakNum=1f2328&sideNums=1f2328&currStreakLabel=0969da&sideLabels=59636e&dates=59636e
+  STREAK_DARK: background=0d1117&border=3d444d&stroke=3d444d&ring=4493f8&fire=4493f8&currStreakNum=f0f6fc&sideNums=f0f6fc&currStreakLabel=4493f8&sideLabels=9198a1&dates=9198a1
+
+jobs:
+  github-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    env:
+      STATS: show_icons=true&hide_rank=true&include_all_commits=true&show=all_time_contribs,prs_merged,reviews&card_width=495&border_radius=6&disable_animations=true
+      LANGS: layout=compact&langs_count=8&card_width=495&border_radius=6&disable_animations=true
+      STREAK: border_radius=6&disable_animations=true&timezone=Pacific/Auckland
+    steps:
+      - name: Stats (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.LIGHT }}
+          path: out/stats-light.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          fail_on_error: true
+      - name: Stats (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.DARK }}
+          path: out/stats-dark.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          fail_on_error: true
+      - name: Languages (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&${{ env.LANGS }}&${{ env.LIGHT }}
+          path: out/languages-light.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          fail_on_error: true
+      - name: Languages (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&${{ env.LANGS }}&${{ env.DARK }}
+          path: out/languages-dark.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          fail_on_error: true
+      - name: Streak (light)
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
+        with:
+          options: user=${{ github.repository_owner }}&${{ env.STREAK }}&${{ env.STREAK_LIGHT }}
+          path: out/streak-light.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+      - name: Streak (dark)
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
+        with:
+          options: user=${{ github.repository_owner }}&${{ env.STREAK }}&${{ env.STREAK_DARK }}
+          path: out/streak-dark.svg
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cards-github-stats
+          path: out/*.svg
+          if-no-files-found: error
+          retention-days: 7
+
+  contribution-graphs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            out/snake-light.svg?palette=github-light&color_snake=#0969da
+            out/snake-dark.svg?palette=github-dark&color_snake=#4493f8
+      - name: 3D contribution calendar
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Summary cards
+        # Its unused profile-details and stats cards need the read:user scope and log an
+        # error without it. validate_cards.py still fails the run if a card we use is missing.
+        continue-on-error: true
+        uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1 # v0.13.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          TIME_ZONE: Pacific/Auckland
+          AUTO_PUSH: false
+      - name: Collect
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          cp profile-3d-contrib/profile-green-animate.svg out/contributions-3d-light.svg
+          cp profile-3d-contrib/profile-night-green.svg out/contributions-3d-dark.svg
+          cp profile-summary-card-output/github/4-productive-time.svg out/productive-time-light.svg
+          cp profile-summary-card-output/github_dark/4-productive-time.svg out/productive-time-dark.svg
+          cp profile-summary-card-output/github/1-repos-per-language.svg out/repos-per-language-light.svg
+          cp profile-summary-card-output/github_dark/1-repos-per-language.svg out/repos-per-language-dark.svg
+          cp profile-summary-card-output/github/2-most-commit-language.svg out/commit-language-light.svg
+          cp profile-summary-card-output/github_dark/2-most-commit-language.svg out/commit-language-dark.svg
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cards-contribution-graphs
+          path: out/*.svg
+          if-no-files-found: error
+          retention-days: 7
+
+  custom-cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: scripts
+          persist-credentials: false
+      - name: WakaTime
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
+        run: python3 scripts/cards/wakatime_card.py out
+      - name: Steam
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_TOKEN }}
+          STEAM_ID: ${{ vars.STEAM_ID }}
+        run: python3 scripts/cards/steam_card.py out
+      - name: Recently updated repositories
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/cards/repos_card.py out
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cards-custom
+          path: out/*.svg
+          if-no-files-found: error
+          retention-days: 7
+
+  extras:
+    # The hosted trophy and activity-graph services answer HTTP 402, so both run here from
+    # pinned commits of their upstream repositories.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    env:
+      TROPHY_SHA: 43736b50a82fca73c8df1c81abb40aa03519975c
+      ACTIVITY_SHA: 0962e9461de815933d462e8b98c7ce566cada8fb
+    steps:
+      - name: Fetch generators
+        run: |
+          set -euo pipefail
+          for spec in "ryo-ma/github-profile-trophy $TROPHY_SHA trophy" "Ashutosh00710/github-readme-activity-graph $ACTIVITY_SHA activity"; do
+            read -r repo sha dir <<<"$spec"
+            git init -q "$dir"
+            git -C "$dir" fetch -q --depth 1 "https://github.com/$repo" "$sha"
+            git -C "$dir" checkout -q FETCH_HEAD
+          done
+          mkdir -p out
+      - uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: v2.x
+      - name: Trophies
+        working-directory: trophy
+        # Third-party code gets the read-only job token, never the personal token.
+        env:
+          GITHUB_TOKEN1: ${{ github.token }}
+        run: |
+          perms=(--allow-net=api.github.com --allow-env "--allow-read=.,../out" --allow-write=../out)
+          deno run "${perms[@]}" render_svg.ts "$GITHUB_REPOSITORY_OWNER" ../out/trophy-light.svg flat
+          deno run "${perms[@]}" render_svg.ts "$GITHUB_REPOSITORY_OWNER" ../out/trophy-dark.svg darkhub
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      - name: Activity graph
+        working-directory: activity
+        # Dependencies install without a lockfile, so this step only ever sees the read-only job token.
+        env:
+          TOKEN: ${{ github.token }}
+          PORT: "5100"
+        run: |
+          set -euo pipefail
+          # Upstream's lockfile is out of sync with package.json, so npm ci refuses it.
+          npm install --ignore-scripts --no-audit --no-fund
+          npm run build
+          node dist/main.js &
+          for _ in $(seq 1 30); do curl -sf "http://127.0.0.1:$PORT/" >/dev/null && break; sleep 1; done
+          base="http://127.0.0.1:$PORT/graph?username=$GITHUB_REPOSITORY_OWNER&days=90&area=true&radius=6&height=300&custom_title=Contributions%20in%20the%20last%2090%20days"
+          curl -sf "$base&bg_color=ffffff&color=1f2328&title_color=1f2328&line=0969da&point=0969da&area_color=0969da&border_color=d1d9e0" -o ../out/activity-light.svg
+          curl -sf "$base&bg_color=0d1117&color=9198a1&title_color=f0f6fc&line=4493f8&point=4493f8&area_color=4493f8&border_color=3d444d" -o ../out/activity-dark.svg
+      - name: Star history
+        run: |
+          set -euo pipefail
+          url="https://api.star-history.com/svg?repos=${GITHUB_REPOSITORY_OWNER}/TL-GD,${GITHUB_REPOSITORY_OWNER}/Tor-Toolkit,${GITHUB_REPOSITORY_OWNER}/GdriveTools,${GITHUB_REPOSITORY_OWNER}/MLTB-ALPINE-DOCKER&type=Date"
+          curl -sf --retry 4 --retry-delay 15 --retry-all-errors "$url" -o out/star-history-light.svg
+          curl -sf --retry 4 --retry-delay 15 --retry-all-errors "$url&theme=dark" -o out/star-history-dark.svg
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cards-extras
+          path: out/*.svg
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [github-stats, contribution-graphs, custom-cards, extras]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: scripts
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: cards-*
+          path: dist
+          merge-multiple: true
+      - name: Validate cards
+        run: python3 scripts/validate_cards.py dist
+      - name: Publish to the output branch
+        if: github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd dist
+          git init -q -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Render profile cards for ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
+          echo "Published $(find . -maxdepth 1 -name '*.svg' | wc -l) cards to the output branch"
+      - name: Keep the schedule alive
+        # GitHub disables scheduled workflows in public repositories after 60 days without
+        # repository activity. Re-enabling through the API resets that timer without a commit.
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/profile.yml/enable"
