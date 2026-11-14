@@ -39,6 +39,8 @@ STEMS = (
 # Cards whose API keys only exist as GitHub secrets. A local publish may skip them with
 # --allow-missing; CI never passes that flag, so they stay required there.
 SECRET_STEMS = {"wakatime", "steam"}
+# Cards the README does not show yet; checked when present, never required.
+OPTIONAL_STEMS = {"steam"}
 MIN_BYTES = 300
 ERROR_TEXT = re.compile(
     r"something went wrong|could not|rate limit|bad credentials|not found|unknown error|error",
@@ -94,7 +96,10 @@ def main() -> int:
     for stem in STEMS:
         for variant in ("light", "dark"):
             path = out_dir / f"{stem}-{variant}.svg"
-            if allow_missing and stem in SECRET_STEMS and not path.exists():
+            optional = stem in OPTIONAL_STEMS or (
+                allow_missing and stem in SECRET_STEMS
+            )
+            if optional and not path.exists():
                 print(f"{path.name:32} skipped (needs a GitHub secret)")
                 continue
             issues = problems_in(path)

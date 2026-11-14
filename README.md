@@ -33,7 +33,8 @@ hours.
   <a href="#open-source-contributions">Upstream contributions</a> ·
   <a href="#earlier-projects">Earlier projects</a> ·
   <a href="#github-stats">GitHub stats</a> ·
-  <a href="#activity">Activity</a>
+  <a href="#activity">Activity</a> ·
+  <a href="#coding-time">Coding time</a>
 </p>
 
 ## About
@@ -251,11 +252,18 @@ Merged pull requests to projects I don't own.
   <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/contributions-3d-light.svg" alt="Contribution calendar for the last year in 3D" width="100%">
 </picture>
 
-<!-- Coding and gaming: enabled once the profile workflow can run with the WakaTime and Steam secrets.
+## Coding time
+
+Tracked by WakaTime across my editors and Claude Code.
+
+<p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-dark.svg">
-  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="49%" align="top">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wakatime-light.svg" alt="WakaTime coding time by language and editor" width="70%">
 </picture>
+</p>
+
+<!-- Steam: enable once the Steam profile and game details are public.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/steam-dark.svg">
   <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/steam-light.svg" alt="Steam profile and games played in the last two weeks" width="49%" align="top">
