@@ -46,14 +46,18 @@ def fetch(token: str, username: str) -> tuple[dict, str, dict]:
         base, headers = f"https://wakatime.com/api/v1/users/{username}", {}
     else:
         raise CardError("set WAKATIME_TOKEN (OAuth) or WAKATIME_USER (public stats)")
-    for slug, label in RANGES:
+    # Public stats only answer for the range the user chose to publish.
+    ranges = RANGES if token else (("all_time", "All time"), *RANGES)
+    for slug, label in ranges:
         try:
             stats = _stats_when_ready(f"{base}/stats/{slug}", headers)
         except CardError as exc:
-            if "HTTP 402" in str(exc) or "HTTP 403" in str(exc):
-                print(f"note: {slug} refused ({exc}), trying a shorter range")
+            if any(f"HTTP {code}" in str(exc) for code in (400, 402, 403)):
+                print(f"note: {slug} refused ({exc}), trying another range")
                 continue
             raise
+        if slug == "all_time":
+            return stats, label, {"total_seconds": stats.get("total_seconds", 0)}
         all_time = get_json(f"{base}/all_time_since_today", headers)["data"]
         return stats, label, all_time
     raise CardError(

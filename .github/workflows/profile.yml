@@ -152,6 +152,8 @@ jobs:
           WAKATIME_USER: ${{ github.repository_owner }}
         run: python3 scripts/cards/wakatime_card.py out
       - name: Steam
+        # Optional until the Steam profile and game details are public.
+        continue-on-error: true
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_TOKEN }}
           STEAM_ID: ${{ vars.STEAM_ID }}
