@@ -21,6 +21,7 @@ STEMS = (
     "contributions-3d",
     "snake",
     "repos",
+    "wrapped",
     "trophy",
     "activity",
     "star-history",

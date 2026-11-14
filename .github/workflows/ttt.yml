@@ -1,0 +1,60 @@
+name: Noughts and crosses
+
+# A move arrives as an issue titled "ttt|move|<1-9>". The title and author are passed
+# through env, never interpolated into the shell, and the script validates both.
+on:
+  issues:
+    types: [opened]
+
+permissions: {}
+
+concurrency:
+  group: ttt
+  cancel-in-progress: false
+
+jobs:
+  move:
+    if: startsWith(github.event.issue.title, 'ttt|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: master
+
+      - name: Play the move
+        id: play
+        env:
+          TTT_TITLE: ${{ github.event.issue.title }}
+          TTT_PLAYER: ${{ github.event.issue.user.login }}
+        run: |
+          message=$(python3 scripts/game/ttt.py)
+          printf 'message=%s\n' "$message" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the board
+        env:
+          PLAYER: ${{ github.event.issue.user.login }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md games/ttt.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Noughts and crosses: move by @${PLAYER}"
+          for attempt in 1 2 3; do
+            git pull --rebase origin master && git push origin HEAD:master && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Reply and close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          MESSAGE: ${{ steps.play.outputs.message }}
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" \
+            --body "$MESSAGE See the board: https://github.com/$GITHUB_REPOSITORY#noughts-and-crosses"
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed

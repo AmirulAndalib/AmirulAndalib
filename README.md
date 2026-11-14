@@ -34,8 +34,10 @@ hours.
   <a href="#open-source-contributions">Upstream contributions</a> ·
   <a href="#earlier-projects">Earlier projects</a> ·
   <a href="#github-stats">GitHub stats</a> ·
+  <a href="#2026-in-review">2026 in review</a> ·
   <a href="#activity">Activity</a> ·
-  <a href="#coding-time">Coding time</a>
+  <a href="#coding-time">Coding time</a> ·
+  <a href="#noughts-and-crosses">Play a game</a>
 </p>
 
 ## About
@@ -241,6 +243,15 @@ Merged pull requests to projects I don't own.
 
 <p align="right"><a href="#top">back to top</a></p>
 
+## 2026 in review
+
+My own GitHub Wrapped, counted from 1 January and redrawn every day.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wrapped-dark.svg">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/wrapped-light.svg" alt="2026 in review: contributions, commits, pull requests, streak, and activity by month, weekday and repository" width="100%">
+</picture>
+
 ## Activity
 
 <picture>
@@ -275,5 +286,22 @@ Tracked by WakaTime across my editors and Claude Code.
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/snake-dark.svg">
   <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/snake-light.svg" alt="Snake eating my contribution graph" width="100%">
 </picture>
+
+## Noughts and crosses
+
+<!-- TTT:START -->
+
+You are ❌. Click an empty square to open an issue with your move; a workflow plays
+⭕ in reply, redraws the board and closes the issue.
+
+| | | |
+|:-:|:-:|:-:|
+| [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C1&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C2&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C3&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) |
+| [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C4&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C5&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C6&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) |
+| [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C7&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C8&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) | [⬜](https://github.com/AmirulAndalib/AmirulAndalib/issues/new?title=ttt%7Cmove%7C9&body=Just%20open%20this%20issue.%20A%20workflow%20plays%20the%20move%20and%20closes%20it.) |
+
+Visitors 0 · profile 0 · draws 0 · recent: no finished games yet
+
+<!-- TTT:END -->
 
 <p align="right"><a href="#top">back to top</a></p>
