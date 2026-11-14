@@ -271,7 +271,9 @@ jobs:
           set -euo pipefail
           # Publish only the expected card names, never whatever else a job uploaded.
           mkdir publish
-          python3 scripts/validate_cards.py --list | while read -r name; do cp "dist/$name" "publish/$name"; done
+          python3 scripts/validate_cards.py --list | while read -r name; do
+            if [ -f "dist/$name" ]; then cp "dist/$name" "publish/$name"; fi
+          done
           cd publish
           git init -q -b output
           git config user.name "github-actions[bot]"
