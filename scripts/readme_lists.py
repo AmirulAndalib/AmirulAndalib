@@ -32,7 +32,7 @@ query($login: String!) {
 MERGED = """
 query($q: String!) {
   search(query: $q, type: ISSUE, first: 30) {
-    nodes { ... on PullRequest { title url mergedAt repository { nameWithOwner } } }
+    nodes { ... on PullRequest { title url mergedAt additions deletions repository { nameWithOwner } } }
   }
 }
 """
@@ -82,7 +82,8 @@ def merged(login: str, token: str) -> list[str]:
     nodes = graphql(MERGED, {"q": query}, token)["search"]["nodes"]
     nodes = sorted((n for n in nodes if n), key=lambda n: n["mergedAt"], reverse=True)
     return [
-        f"- {n['repository']['nameWithOwner']}: [{clean(n['title'])}]({n['url']}), {n['mergedAt'][:10]}"
+        f"- {n['repository']['nameWithOwner']}: [{clean(n['title'])}]({n['url']}), "
+        f"`+{n['additions']} -{n['deletions']}`, {n['mergedAt'][:10]}"
         for n in nodes[:LIMIT]
     ]
 

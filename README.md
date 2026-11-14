@@ -40,6 +40,11 @@ hours.
   <a href="#noughts-and-crosses">Play a game</a>
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/terminal-dark.svg">
+  <img src="https://raw.githubusercontent.com/AmirulAndalib/AmirulAndalib/output/terminal-light.svg" alt="neofetch-style terminal card: CachyOS on an ASUS NUC 16 Pro, the current kernel and router firmware, repositories, stars, followers and merged upstream pull requests" width="100%">
+</picture>
+
 ## About
 
 - **What I do:** DevOps and CI/CD pipelines, cloud deploys, Linux administration, and keeping
@@ -181,12 +186,12 @@ Merged pull requests to projects I don't own.
 **Recently merged upstream** (refreshed daily)
 
 <!-- MERGED:START -->
-- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.2.0](https://github.com/microsoft/winget-pkgs/pull/458286), 2026-10-22
-- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.1.0](https://github.com/microsoft/winget-pkgs/pull/453538), 2026-10-16
-- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.0.0](https://github.com/microsoft/winget-pkgs/pull/453255), 2026-10-15
-- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.3](https://github.com/microsoft/winget-pkgs/pull/452113), 2026-10-13
-- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.2.1.0](https://github.com/microsoft/winget-pkgs/pull/424400), 2026-09-16
-- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.2](https://github.com/microsoft/winget-pkgs/pull/403522), 2026-07-17
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.2.0](https://github.com/microsoft/winget-pkgs/pull/458286), `+71 -0`, 2026-10-22
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.1.0](https://github.com/microsoft/winget-pkgs/pull/453538), `+71 -0`, 2026-10-16
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.3.0.0](https://github.com/microsoft/winget-pkgs/pull/453255), `+71 -0`, 2026-10-15
+- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.3](https://github.com/microsoft/winget-pkgs/pull/452113), `+71 -0`, 2026-10-13
+- microsoft/winget-pkgs: [xHybred.NVPIRevamped version 7.2.1.0](https://github.com/microsoft/winget-pkgs/pull/424400), `+71 -0`, 2026-09-16
+- microsoft/winget-pkgs: [Orbmu2k.nvidiaProfileInspector version 3.0.2.2](https://github.com/microsoft/winget-pkgs/pull/403522), `+71 -0`, 2026-07-17
 <!-- MERGED:END -->
 
 ## Earlier projects

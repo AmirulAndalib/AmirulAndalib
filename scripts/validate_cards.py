@@ -22,6 +22,7 @@ STEMS = (
     "snake",
     "repos",
     "wrapped",
+    "terminal",
     "trophy",
     "activity",
     "star-history",
