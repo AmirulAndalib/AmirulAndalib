@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-TAGLINE = "Firmware, kernels, and the automation that keeps them current."
+TAGLINE = "DevOps · Cloud · Linux sysadmin · Cybersecurity"
 DETAIL = "Auckland, New Zealand · GitHub since 2021 · 270+ source repositories"
 THEMES = {
     "light": {

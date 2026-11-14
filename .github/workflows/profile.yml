@@ -148,7 +148,8 @@ jobs:
           persist-credentials: false
       - name: WakaTime
         env:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_TOKEN }}
+          WAKATIME_TOKEN: ${{ secrets.WAKATIME_OAUTH_TOKEN }}
+          WAKATIME_USER: ${{ github.repository_owner }}
         run: python3 scripts/cards/wakatime_card.py out
       - name: Steam
         env:

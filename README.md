@@ -20,9 +20,11 @@
   <img src="https://img.shields.io/badge/timezone-Pacific%2FAuckland-59636e?style=flat-square" alt="Timezone Pacific/Auckland">
 </p>
 
-I build, compile and tweak niche code. Most of what I ship is automation that keeps running
-after I stop looking at it: a router that flashes its own firmware, a kernel that rebuilds the
-moment upstream moves, and Windows packages that publish themselves every six hours.
+DevOps, cloud and Linux sysadmin with a cybersecurity streak. Building, compiling, and tweaking
+niche code, driven by low-level curiosity, automated pipelines, and optimization experiments that
+make my day. Most of what I run keeps itself up to date: a router that flashes its own firmware,
+a kernel that rebuilds the moment upstream moves, and packages that publish themselves every six
+hours.
 
 <p align="center">
   <a href="#about">About</a> ·
@@ -31,20 +33,39 @@ moment upstream moves, and Windows packages that publish themselves every six ho
   <a href="#open-source-contributions">Upstream contributions</a> ·
   <a href="#earlier-projects">Earlier projects</a> ·
   <a href="#github-stats">GitHub stats</a> ·
-  <a href="#activity">Activity</a> ·
-  <a href="#how-this-profile-works">How this profile works</a>
+  <a href="#activity">Activity</a>
 </p>
 
 ## About
 
-- **Working on:** keeping a GL.iNet Flint 2 on SNAPSHOT firmware without touching it, and a
-  CachyOS server kernel tuned for an ASUS NUC 16 Pro.
-- **Home lab:** OpenWrt-based router, an Arch-based server running a custom kernel with
-  sched-ext schedulers, and Windows packages that update themselves.
-- **Ask me about:** firmware update pipelines, kernel builds in CI, Telegram bots, packaging for
-  WinGet and Scoop.
-- **Earlier:** Telegram leech and mirror bots that were forked hundreds of times, Google Drive
-  tooling, and an Android Magisk module for Exynos devices.
+- **What I do:** DevOps and CI/CD pipelines, cloud deploys, Linux administration, and keeping
+  infrastructure patched, locked down and boring.
+- **Working on:** a GL.iNet Flint 2 that stays on SNAPSHOT firmware by itself, and a CachyOS
+  server kernel with sched-ext schedulers tuned for an ASUS NUC 16 Pro.
+- **Home lab:** OpenWrt router, Arch-based server on a custom kernel, AdGuard Home and Pi-hole for
+  DNS filtering, Home Assistant, and Docker stacks for self-hosted apps.
+- **Security side:** supply-chain hygiene (SHA-pinned actions, secret scanning with GitGuardian
+  and gitleaks, Semgrep), least-privilege tokens, and auditing what actually runs on my accounts.
+- **Ask me about:** firmware update pipelines, kernel builds in CI, GitHub Actions cost and
+  security, WinGet and Scoop packaging, Telegram bots.
+- **Earlier:** Telegram leech and mirror bots forked hundreds of times, Google Drive tooling, and
+  an Android Magisk module for Exynos devices.
+
+<details open>
+<summary>GitHub achievements</summary>
+<br>
+<p align="center">
+  <img src="https://img.shields.io/badge/Pull_Shark-x4-F78166?style=for-the-badge&logo=github&logoColor=white" alt="Pull Shark x4">
+  <img src="https://img.shields.io/badge/Galaxy_Brain-x4-8957E5?style=for-the-badge&logo=github&logoColor=white" alt="Galaxy Brain x4">
+  <img src="https://img.shields.io/badge/Pair_Extraordinaire-x3-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Pair Extraordinaire x3">
+  <img src="https://img.shields.io/badge/Starstruck-x2-D29922?style=for-the-badge&logo=github&logoColor=white" alt="Starstruck x2">
+  <img src="https://img.shields.io/badge/Public_Sponsor-%E2%9D%A4-DB61A2?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Public Sponsor">
+  <img src="https://img.shields.io/badge/YOLO-merged-2DA44E?style=for-the-badge&logo=github&logoColor=white" alt="YOLO">
+  <img src="https://img.shields.io/badge/Quickdraw-%E2%9A%A1-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="Quickdraw">
+  <img src="https://img.shields.io/badge/Developer_Program-member-1f2328?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Developer Program member">
+  <img src="https://img.shields.io/badge/GitHub-PRO-8957E5?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro">
+</p>
+</details>
 
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -72,6 +93,41 @@ moment upstream moves, and Windows packages that publish themselves every six ho
   <img src="https://img.shields.io/badge/WinGet_%26_Scoop-0078D4?style=flat" alt="WinGet and Scoop">
   <img src="https://img.shields.io/badge/WakaTime-1f2328?style=flat&logo=wakatime&logoColor=white" alt="WakaTime">
   <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=claude&logoColor=white" alt="Claude Code">
+</p>
+
+<p align="center"><b>Cloud and platforms</b><br>
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
+  <img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" alt="DigitalOcean">
+  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render">
+  <img src="https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" alt="Railway">
+  <img src="https://img.shields.io/badge/Koyeb-121212?style=for-the-badge&logo=koyeb&logoColor=white" alt="Koyeb">
+  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge" alt="Heroku">
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/GHCR_%26_Docker_Hub-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="GHCR and Docker Hub">
+</p>
+
+<p align="center"><b>Infrastructure and home lab</b><br>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+  <img src="https://img.shields.io/badge/CachyOS-1793D1?style=for-the-badge&logo=cachyos&logoColor=white" alt="CachyOS">
+  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white" alt="Arch Linux">
+  <img src="https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=openwrt&logoColor=white" alt="OpenWrt">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/AdGuard_Home-68BC71?style=for-the-badge&logo=adguard&logoColor=white" alt="AdGuard Home">
+  <img src="https://img.shields.io/badge/Pi--hole-96060C?style=for-the-badge&logo=pihole&logoColor=white" alt="Pi-hole">
+  <img src="https://img.shields.io/badge/Home_Assistant-18BCF2?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant">
+  <img src="https://img.shields.io/badge/Termius_SSH-000000?style=for-the-badge&logo=termius&logoColor=white" alt="Termius SSH">
+  <img src="https://img.shields.io/badge/Windows-0078D4?style=for-the-badge" alt="Windows">
+</p>
+
+<p align="center"><b>Security</b><br>
+  <img src="https://img.shields.io/badge/GitGuardian-1D2D3E?style=for-the-badge" alt="GitGuardian">
+  <img src="https://img.shields.io/badge/Semgrep-2B3135?style=for-the-badge" alt="Semgrep">
+  <img src="https://img.shields.io/badge/gitleaks-secret_scanning-B8202E?style=for-the-badge" alt="gitleaks">
+  <img src="https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP">
+  <img src="https://img.shields.io/badge/SHA--pinned-supply_chain-2DA44E?style=for-the-badge&logo=githubactions&logoColor=white" alt="SHA-pinned actions">
+  <img src="https://img.shields.io/badge/Let's_Encrypt-003A70?style=for-the-badge&logo=letsencrypt&logoColor=white" alt="Let's Encrypt">
 </p>
 
 <p align="right"><a href="#top">back to top</a></p>
@@ -210,37 +266,3 @@ Merged pull requests to projects I don't own.
 </picture>
 
 <p align="right"><a href="#top">back to top</a></p>
-
-## How this profile works
-
-<details>
-<summary>Every card here is rendered by my own workflow, not by a hosted service</summary>
-<br>
-
-Most profile cards you see on GitHub point at shared Vercel instances. In November 2026 those
-returned HTTP 503 or 402, so this profile renders everything itself and commits the results to
-the [output](https://github.com/AmirulAndalib/AmirulAndalib/tree/output) branch. A run that
-produces a broken card fails instead of publishing it.
-
-```mermaid
-flowchart LR
-  cron["profile.yml<br/>daily at 02:23 NZDT"] --> stats["github-stats<br/>stats, languages, streak"]
-  cron --> graphs["contribution-graphs<br/>snake, 3D calendar, summary cards"]
-  cron --> extras["extras<br/>trophies, activity graph, star history"]
-  cron --> custom["custom-cards<br/>WakaTime, Steam, recent repos"]
-  stats --> validate{"validate_cards.py<br/>XML, size, error text"}
-  graphs --> validate
-  extras --> validate
-  custom --> validate
-  validate -- all pass --> output[("output branch")]
-  validate -- any fail --> stop["run fails,<br/>previous cards stay live"]
-  output --> readme["README.md"]
-```
-
-All third-party actions are pinned to full commit SHAs. The WakaTime, Steam and recent-repos
-cards come from small standard-library Python scripts in [scripts/cards](scripts/cards).
-
-</details>
-
-<sub>Rendered by [profile.yml](.github/workflows/profile.yml) · cards published to the
-[output](https://github.com/AmirulAndalib/AmirulAndalib/tree/output) branch</sub>

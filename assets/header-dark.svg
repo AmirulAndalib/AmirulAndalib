@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="200" viewBox="0 0 1012 200" role="img" aria-label="M Amirul. Firmware, kernels, and the automation that keeps them current. Auckland, New Zealand · GitHub since 2021 · 270+ source repositories">
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="200" viewBox="0 0 1012 200" role="img" aria-label="M Amirul. DevOps · Cloud · Linux sysadmin · Cybersecurity Auckland, New Zealand · GitHub since 2021 · 270+ source repositories">
   <title>M Amirul</title>
   <style>
     .name{opacity:0;animation:rise .7s ease-out .1s forwards}
     .detail{opacity:0;animation:rise .6s ease-out 2.9s forwards}
-    .cover{animation:type 2.2s steps(62) .7s forwards}
-    .caret{animation:caret 2.2s steps(62) .7s forwards,blink 1s step-end 2.9s 4}
+    .cover{animation:type 2.2s steps(47) .7s forwards}
+    .caret{animation:caret 2.2s steps(47) .7s forwards,blink 1s step-end 2.9s 4}
     .sq{transform-box:fill-box;transform-origin:center;animation:pulse 2.8s ease-in-out infinite}
     @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
     @keyframes type{from{transform:translateX(0)}to{transform:translateX(600px)}}
@@ -16,7 +16,7 @@
   <rect x="0.5" y="0.5" width="1011" height="199" rx="6" fill="#0d1117" stroke="#3d444d"/>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
     <text class="name" x="40" y="84" font-size="40" font-weight="600" fill="#f0f6fc">M Amirul</text>
-    <text x="40" y="120" font-size="18" fill="#9198a1">Firmware, kernels, and the automation that keeps them current.</text>
+    <text x="40" y="120" font-size="18" fill="#9198a1">DevOps · Cloud · Linux sysadmin · Cybersecurity</text>
     <rect class="cover" x="38" y="100" width="610" height="28" fill="#0d1117"/>
     <rect class="caret" x="40" y="104" width="2" height="20" fill="#4493f8"/>
     <text class="detail" x="40" y="160" font-size="14" fill="#9198a1">Auckland, New Zealand · GitHub since 2021 · 270+ source repositories</text>

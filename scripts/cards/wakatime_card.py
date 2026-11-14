@@ -1,13 +1,13 @@
 """Render the coding-time card from the WakaTime API.
 
-Reads the API key from WAKATIME_API_KEY and writes wakatime-light.svg and wakatime-dark.svg.
+Reads a personal OAuth token from WAKATIME_TOKEN, or falls back to the public stats of
+WAKATIME_USER, and writes wakatime-light.svg and wakatime-dark.svg.
 Editors are listed as WakaTime reports them, so time sent by the Claude Code plugin shows
 up next to the regular editors.
 """
 
 from __future__ import annotations
 
-import base64
 import os
 import sys
 import time
@@ -37,22 +37,28 @@ LANGUAGE_ROWS = 6
 EDITOR_ROWS = 4
 
 
-def fetch(api_key: str) -> tuple[dict, str, dict]:
-    token = base64.b64encode(api_key.encode()).decode()
-    headers = {"Authorization": f"Basic {token}"}
+def fetch(token: str, username: str) -> tuple[dict, str, dict]:
+    # WakaTime no longer accepts plugin API keys for reads. Use a personal OAuth token
+    # (https://wakatime.com/oauth) when given; otherwise read the user's public stats.
+    if token:
+        base, headers = API, {"Authorization": f"Bearer {token}"}
+    elif username:
+        base, headers = f"https://wakatime.com/api/v1/users/{username}", {}
+    else:
+        raise CardError("set WAKATIME_TOKEN (OAuth) or WAKATIME_USER (public stats)")
     for slug, label in RANGES:
         try:
-            stats = _stats_when_ready(f"{API}/stats/{slug}", headers)
+            stats = _stats_when_ready(f"{base}/stats/{slug}", headers)
         except CardError as exc:
             if "HTTP 402" in str(exc) or "HTTP 403" in str(exc):
-                print(
-                    f"note: {slug} is not available on this plan, trying a shorter range"
-                )
+                print(f"note: {slug} refused ({exc}), trying a shorter range")
                 continue
             raise
-        all_time = get_json(f"{API}/all_time_since_today", headers)["data"]
+        all_time = get_json(f"{base}/all_time_since_today", headers)["data"]
         return stats, label, all_time
-    raise CardError("WakaTime returned no usable stats range")
+    raise CardError(
+        "WakaTime refused every range; use an OAuth token or make stats public"
+    )
 
 
 def _stats_when_ready(url: str, headers: dict[str, str]) -> dict:
@@ -133,13 +139,11 @@ def render(stats: dict, range_label: str, all_time: dict, palette: Palette) -> s
 
 
 def main() -> int:
-    api_key = os.environ.get("WAKATIME_API_KEY", "").strip()
-    if not api_key:
-        print("error: WAKATIME_API_KEY is not set", file=sys.stderr)
-        return 1
+    token = os.environ.get("WAKATIME_TOKEN", "").strip()
+    username = os.environ.get("WAKATIME_USER", "").strip()
     out_dir = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
     try:
-        stats, label, all_time = fetch(api_key)
+        stats, label, all_time = fetch(token, username)
     except CardError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
