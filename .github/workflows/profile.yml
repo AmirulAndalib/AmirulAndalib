@@ -34,8 +34,8 @@ jobs:
       contents: read
     env:
       STATS: show_icons=true&hide_rank=true&include_all_commits=true&show=all_time_contribs,prs_merged,reviews&card_width=495&border_radius=6
-      LANGS: layout=compact&langs_count=8&card_width=495&border_radius=6
-      STREAK: border_radius=6&timezone=Pacific/Auckland
+      LANGS: layout=compact&langs_count=14&card_width=495&border_radius=6
+      STREAK: border_radius=6&timezone=Pacific/Auckland&card_width=340&card_height=200
     steps:
       - name: Stats (light)
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
@@ -81,6 +81,13 @@ jobs:
           options: user=${{ github.repository_owner }}&${{ env.STREAK }}&${{ env.STREAK_DARK }}
           path: out/streak-dark.svg
           token: ${{ secrets.METRICS_TOKEN || github.token }}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: scripts
+          path: src
+          persist-credentials: false
+      - name: Match the stats card to the languages card height
+        run: python3 src/scripts/pad_svg.py 265 out/stats-light.svg out/stats-dark.svg
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: cards-github-stats
