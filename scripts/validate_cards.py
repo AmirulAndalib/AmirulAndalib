@@ -42,9 +42,15 @@ def problems_in(path: Path) -> list[str]:
         return ["missing"]
     if path.stat().st_size < MIN_BYTES:
         return [f"only {path.stat().st_size} bytes"]
+    raw = path.read_bytes()
     # No card needs a DTD; refusing entity declarations keeps the stdlib parser safe.
-    if b"<!ENTITY" in path.read_bytes():
+    if b"<!ENTITY" in raw:
         return ["contains an XML entity declaration"]
+    # Some cards come from code installed without a lockfile; refuse anything active.
+    lowered = raw.lower()
+    for marker in (b"<script", b"javascript:", b"<foreignobject"):
+        if marker in lowered:
+            return [f"contains {marker.decode()}"]
     try:
         root = ET.parse(path).getroot()
     except ET.ParseError as exc:
@@ -69,6 +75,11 @@ def problems_in(path: Path) -> list[str]:
 def main() -> int:
     args = [arg for arg in sys.argv[1:] if not arg.startswith("--")]
     allow_missing = "--allow-missing" in sys.argv
+    if "--list" in sys.argv:
+        # The exact file names the publish step may copy; anything else stays behind.
+        for stem in STEMS:
+            print(f"{stem}-light.svg\n{stem}-dark.svg")
+        return 0
     out_dir = Path(args[0] if args else "dist")
     failures = checked = 0
     for stem in STEMS:

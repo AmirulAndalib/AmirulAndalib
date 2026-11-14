@@ -256,7 +256,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          cd dist
+          # Publish only the expected card names, never whatever else a job uploaded.
+          mkdir publish
+          python3 scripts/validate_cards.py --list | while read -r name; do cp "dist/$name" "publish/$name"; done
+          cd publish
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
