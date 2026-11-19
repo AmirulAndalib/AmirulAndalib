@@ -162,8 +162,8 @@ hours.
 **Latest releases** (refreshed daily)
 
 <!-- RELEASES:START -->
+- [gl-inet-mt6000-auto-snapshot](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot): [GL-MT6000 Snapshot 4.11.0 (2026-11-17 16:34:22 UTC)](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot/releases/tag/v4.11.0-snapshot-1794933262), 2026-11-18
 - [asus-nuc16pro-cachyos-server-edge-kernel](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel): [Linux 7.3.5 • CachyOS ServerMax • ASUS NUC 16 Pro • 2026-11-17](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel/releases/tag/v7.3.5-cachyos-servermax-nuc16pro-x86_64v3-20261117.217), 2026-11-17
-- [gl-inet-mt6000-auto-snapshot](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot): [GL-MT6000 Snapshot 4.11.0 (2026-11-16 16:35:47 UTC)](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot/releases/tag/v4.11.0-snapshot-1794846947), 2026-11-17
 - [mvolt-scoop](https://github.com/AmirulAndalib/mvolt-scoop): [mVolt+ v0.50.13 (mirror)](https://github.com/AmirulAndalib/mvolt-scoop/releases/tag/v0.50.13), 2026-11-08
 - [Scene7_ExtremeGT](https://github.com/AmirulAndalib/Scene7_ExtremeGT): [Release 20250621-015944](https://github.com/AmirulAndalib/Scene7_ExtremeGT/releases/tag/release-20250621-015944), 2025-06-20
 - [xiaomi-router-4a-gigabit](https://github.com/AmirulAndalib/xiaomi-router-4a-gigabit): [2025.04.15 xiaomi-router-4a-gigabit](https://github.com/AmirulAndalib/xiaomi-router-4a-gigabit/releases/tag/2025.04.15), 2025-04-14
