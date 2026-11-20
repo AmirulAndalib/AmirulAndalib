@@ -47,12 +47,16 @@ hours.
 
 ## About
 
+- **Looking for:** a DevOps, cloud or systems internship over the New Zealand summer, November
+  2027 to March 2028. Applied Computing at the University of Waikato, AWS Certified Cloud
+  Practitioner. Portfolio: [amirulandalib.eu.org](https://amirulandalib.eu.org).
 - **What I do:** DevOps and CI/CD pipelines, cloud deploys, Linux administration, and keeping
   infrastructure patched, locked down and boring.
 - **Working on:** a GL.iNet Flint 2 that stays on SNAPSHOT firmware by itself, and a CachyOS
   server kernel with sched-ext schedulers tuned for an ASUS NUC 16 Pro.
-- **Home lab:** OpenWrt router, Arch-based server on a custom kernel, AdGuard Home and Pi-hole for
-  DNS filtering, Home Assistant, and Docker stacks for self-hosted apps.
+- **Home lab:** OpenWrt router, and an Ubuntu server on my own CachyOS kernel running 90+
+  containers across 60 Docker Compose stacks: AdGuard Home in front of an Unbound resolver,
+  Home Assistant, and Pangolin, Traefik and CrowdSec at the edge.
 - **Security side:** supply-chain hygiene (SHA-pinned actions, secret scanning with GitGuardian
   and gitleaks, Semgrep), least-privilege tokens, and auditing what actually runs on my accounts.
 - **Ask me about:** firmware update pipelines, kernel builds in CI, GitHub Actions cost and
@@ -120,11 +124,13 @@ hours.
 <p align="center"><b>Infrastructure and home lab</b><br>
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
   <img src="https://img.shields.io/badge/CachyOS-1793D1?style=for-the-badge&logo=cachyos&logoColor=white" alt="CachyOS">
-  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white" alt="Arch Linux">
+  <img src="https://img.shields.io/badge/Ubuntu_Server-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu Server">
   <img src="https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=openwrt&logoColor=white" alt="OpenWrt">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/AdGuard_Home-68BC71?style=for-the-badge&logo=adguard&logoColor=white" alt="AdGuard Home">
-  <img src="https://img.shields.io/badge/Pi--hole-96060C?style=for-the-badge&logo=pihole&logoColor=white" alt="Pi-hole">
+  <img src="https://img.shields.io/badge/Unbound-1F6FEB?style=for-the-badge" alt="Unbound">
+  <img src="https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik">
+  <img src="https://img.shields.io/badge/CrowdSec-2C2C66?style=for-the-badge&logo=crowdsec&logoColor=white" alt="CrowdSec">
   <img src="https://img.shields.io/badge/Home_Assistant-18BCF2?style=for-the-badge&logo=homeassistant&logoColor=white" alt="Home Assistant">
   <img src="https://img.shields.io/badge/Termius_SSH-000000?style=for-the-badge&logo=termius&logoColor=white" alt="Termius SSH">
   <img src="https://img.shields.io/badge/Windows-0078D4?style=for-the-badge" alt="Windows">
