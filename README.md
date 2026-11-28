@@ -168,7 +168,7 @@ hours.
 **Latest releases** (refreshed daily)
 
 <!-- RELEASES:START -->
-- [gl-inet-mt6000-auto-snapshot](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot): [GL-MT6000 Snapshot 4.11.0 (2026-11-25 16:43:24 UTC)](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot/releases/tag/v4.11.0-snapshot-1795625004), 2026-11-26
+- [gl-inet-mt6000-auto-snapshot](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot): [GL-MT6000 Release 4.11.3](https://github.com/AmirulAndalib/gl-inet-mt6000-auto-snapshot/releases/tag/v4.11.3), 2026-11-27
 - [asus-nuc16pro-cachyos-server-edge-kernel](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel): [scx schedulers v1.1.5 - ASUS NUC 16 Pro - 2026-11-24](https://github.com/AmirulAndalib/asus-nuc16pro-cachyos-server-edge-kernel/releases/tag/scx-v1.1.5-20261124.165), 2026-11-24
 - [mvolt-scoop](https://github.com/AmirulAndalib/mvolt-scoop): [mVolt+ v0.50.13 (mirror)](https://github.com/AmirulAndalib/mvolt-scoop/releases/tag/v0.50.13), 2026-11-08
 - [Scene7_ExtremeGT](https://github.com/AmirulAndalib/Scene7_ExtremeGT): [Release 20250621-015944](https://github.com/AmirulAndalib/Scene7_ExtremeGT/releases/tag/release-20250621-015944), 2025-06-20
